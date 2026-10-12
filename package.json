@@ -1,0 +1,16 @@
+{
+  "name": "lobzik-minecraft-bot",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Command-driven Mineflayer bot with mining, pathfinding and self-defense",
+  "main": "src/index.js",
+  "scripts": { "start": "node src/index.js", "check": "node --check src/index.js" },
+  "engines": { "node": ">=22" },
+  "dependencies": {
+    "mineflayer": "npm:@wp2508/mineflayer@4.42.2",
+    "mineflayer-pathfinder": "^2.4.5",
+    "mineflayer-collectblock": "^1.4.1",
+    "vec3": "^0.1.10",
+    "dotenv": "^16.4.7"
+  }
+}
