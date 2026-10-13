@@ -10,7 +10,8 @@ This branch adds a story-driven farm tycoon datapack in `sunnybrook_farm/`. The 
 5. Stand in a mostly clear area and run `/function farm:start`. Creative mode is recommended for setup.
 
 ## Gameplay
-- Auto-builds a cottage, crop plot, barn, market stall, pond, and three named villager characters.
+- Auto-builds a cottage, crop plot, barn, market stall, pond, three villager characters, and three mannequin NPCs.
+- Click Mara for quests, Pip for the shop and delivery order, or Rook for the Harvest Festival. Each NPC opens a clickable chat menu.
 - Story quests and rewards: `/trigger farm_quest set 1` (welcome), `2` (animal rescue), `3` (delivery dash), `4` (secret pond).
 - Farm currency and purchases: `/trigger farm_shop set 1` for help; `2` garden (20 coins), `3` chicken coop (35 coins), `4` windmill (60 coins).
 - Event: `/trigger farm_event set 1` for the Harvest Festival.
