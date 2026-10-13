@@ -8,3 +8,4 @@ scoreboard objectives add farm_q_welcome dummy
 scoreboard objectives add farm_q_animals dummy
 scoreboard objectives add farm_q_delivery dummy
 tellraw @a {"text":"Sunnybrook Farm loaded! Right-click a character to open their menu.","color":"green"}
+scoreboard objectives add farm_q_pond dummy
