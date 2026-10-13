@@ -21,7 +21,8 @@ fill ~3 ~4 ~3 ~10 ~4 ~10 minecraft:dark_oak_planks
 fill ~-9 ~ ~3 ~-5 ~ ~6 minecraft:oak_planks
 fill ~-9 ~2 ~3 ~-5 ~2 ~6 minecraft:red_wool
 fill ~-10 ~ ~-9 ~-7 ~ ~-6 minecraft:water
-execute unless entity @e[type=minecraft:mannequin,tag=farm_npc_guide,distance=..30] run summon minecraft:mannequin ~-1 ~ ~-2 {Tags:["farm_npc_guide"],CustomNameVisible:1b,hide_description:true,CustomName:'{"text":"Mara","color":"green"}',Invulnerable:1b,PersistenceRequired:1b}
-execute unless entity @e[type=minecraft:mannequin,tag=farm_npc_trader,distance=..30] run summon minecraft:mannequin ~-7 ~ ~3 {Tags:["farm_npc_trader"],CustomNameVisible:1b,hide_description:true,CustomName:'{"text":"Pip","color":"gold"}',Invulnerable:1b,PersistenceRequired:1b}
-execute unless entity @e[type=minecraft:mannequin,tag=farm_npc_mechanic,distance=..30] run summon minecraft:mannequin ~7 ~ ~6 {Tags:["farm_npc_mechanic"],CustomNameVisible:1b,hide_description:true,CustomName:'{"text":"Rook","color":"aqua"}',Invulnerable:1b,PersistenceRequired:1b}
-tellraw @s {"text":"Farm built! Right-click Mara for quests, Pip for the shop, and Rook for animal help and events.","color":"green"}
+setblock ~8 ~ ~7 minecraft:hay_block
+execute unless entity @e[type=minecraft:mannequin,tag=farm_npc_guide,distance=..30] run summon minecraft:mannequin ~-1 ~ ~-2 {Tags:["farm_npc_guide"],CustomNameVisible:1b,hide_description:true,CustomName:'{"text":"Мара","color":"green"}',Invulnerable:1b,PersistenceRequired:1b}
+execute unless entity @e[type=minecraft:mannequin,tag=farm_npc_trader,distance=..30] run summon minecraft:mannequin ~-7 ~ ~3 {Tags:["farm_npc_trader"],CustomNameVisible:1b,hide_description:true,CustomName:'{"text":"Пип","color":"gold"}',Invulnerable:1b,PersistenceRequired:1b}
+execute unless entity @e[type=minecraft:mannequin,tag=farm_npc_mechanic,distance=..30] run summon minecraft:mannequin ~7 ~ ~6 {Tags:["farm_npc_mechanic"],CustomNameVisible:1b,hide_description:true,CustomName:'{"text":"Рук","color":"aqua"}',Invulnerable:1b,PersistenceRequired:1b}
+tellraw @s {"text":"Ферма построена! Собирай урожай, найди тюк сена у амбара и возвращайся к персонажам с припасами.","color":"green"}
