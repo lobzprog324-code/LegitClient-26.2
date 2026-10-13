@@ -1,0 +1,16 @@
+{
+  "criteria": {
+    "interact": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:villager",
+          "nbt": "{Tags:[\"farm_mechanic\"]}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "farm:npc/rook"
+  }
+}
