@@ -1,6 +1,6 @@
-execute if score @s farm_money matches 20.. run scoreboard players remove @s farm_money 20
-execute if score @s farm_money matches ..19 run tellraw @s {"text":"Пока не хватает монет. Поговори с Марой или Рук за заданиями!","color":"red"}
-execute if score @s farm_money matches ..19 run return 0
+execute unless score @s farm_money matches 20.. run tellraw @s {"text":"Пока не хватает монет. Поговори с Марой или Рук за заданиями!","color":"red"}
+execute unless score @s farm_money matches 20.. run return 0
+scoreboard players remove @s farm_money 20
 fill ~15 ~ ~-5 ~21 ~ ~2 minecraft:farmland[moisture=7]
 setblock ~18 ~ ~-1 minecraft:water
 tellraw @s {"text":"Новые грядки построены! -20 монет.","color":"green"}
