@@ -11,6 +11,8 @@ clear @s minecraft:carrot 1
 clear @s minecraft:wheat_seeds 1
 scoreboard players set @s farm_q_animals 2
 scoreboard players add @s farm_money 20
+execute unless entity @e[type=minecraft:chicken,tag=farm_rescued_chicken,distance=..30] run summon minecraft:chicken ~7 ~1 ~6 {Tags:["farm_rescued_chicken"],PersistenceRequired:1b}
+execute unless entity @e[type=minecraft:sheep,tag=farm_rescued_sheep,distance=..30] run summon minecraft:sheep ~8 ~1 ~6 {Tags:["farm_rescued_sheep"],PersistenceRequired:1b}
 give @s minecraft:golden_carrot 2
-tellraw @s {"text":"Рук: Припасы доставлены! Животные довольны. Вот 20 монет и золотая морковь в награду!","color":"green"}
+tellraw @s {"text":"Рук: Припасы доставлены! Курочки и овечка теперь в безопасности! Вот 20 монет и золотая морковь в награду!","color":"green"}
 playsound minecraft:entity.animal.ambient master @s ~ ~ ~ 0.8 1.1
