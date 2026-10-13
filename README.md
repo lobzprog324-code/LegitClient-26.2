@@ -1,6 +1,6 @@
 # Sunnybrook Farm — Minecraft Java 26.2
 
-This branch replaces the old project on this branch with a story-driven farm tycoon datapack. The original `main` branch remains untouched.
+This branch adds a story-driven farm tycoon datapack in `sunnybrook_farm/`. The original `main` branch remains untouched; the older project files are retained on this branch for recovery.
 
 ## Install the datapack
 1. Open `sunnybrook_farm/` in this repository.
