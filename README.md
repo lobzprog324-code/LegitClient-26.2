@@ -1,23 +1,18 @@
 # Sunnybrook Farm — Minecraft Java 26.2
 
-This branch adds a story-driven farm tycoon datapack in `sunnybrook_farm/`. The original `main` branch remains untouched; the older project files are retained on this branch for recovery.
+A kid-friendly farm tycoon datapack with clickable NPC menus. The `main` branch remains untouched; this version is in `farm-tycoon`.
 
-## Install the datapack
-1. Open `sunnybrook_farm/` in this repository.
-2. Download the folder contents (or download the repository ZIP and extract the `sunnybrook_farm` folder).
-3. Put `sunnybrook_farm` into `.minecraft/saves/<world>/datapacks/`.
-4. Open the world and run `/reload`.
-5. Stand in a mostly clear area and run `/function farm:start`. Creative mode is recommended for setup.
+## Install
+1. Download this branch as ZIP using **Code → Download ZIP**.
+2. Extract `sunnybrook_farm` into `.minecraft/saves/<world>/datapacks/`.
+3. Open the world and run `/reload`.
+4. In a clear area, run `/function farm:start` once to build the farm.
 
-## Gameplay
-- Auto-builds a cottage, crop plot, barn, market stall, pond, three villager characters, and three mannequin NPCs.
-- Click Mara for quests, Pip for the shop and delivery order, or Rook for the Harvest Festival. Each NPC opens a clickable chat menu.
-- Story quests and rewards: `/trigger farm_quest set 1` (welcome), `2` (animal rescue), `3` (delivery dash), `4` (secret pond).
-- Farm currency and purchases: `/trigger farm_shop set 1` for help; `2` garden (20 coins), `3` chicken coop (35 coins), `4` windmill (60 coins).
-- Event: `/trigger farm_event set 1` for the Harvest Festival.
-- Guide: `/function farm:help`.
+## Play without typing commands
+- Right-click **Mara** to open a menu with quests.
+- Right-click **Pip** to open the shop; click buttons in chat to buy garden plots, a chicken coop, or a windmill.
+- Right-click **Rook** for animal-help quests, a friendly gift, or the timed Harvest Festival.
+- The chat menu buttons use the `farm_action` trigger objective, so normal players can click them without OP permissions.
 
-The datapack is designed for Minecraft Java 26.2 and uses the singular `function` resource directory and pack format 107.1.
-
-## Current limitations
-This repository contains a datapack, not a pre-generated world save. The starter farm is built around the player where the function is run. Villagers provide character flavor; quests currently start via commands rather than right-click dialogue. Test in a copy of your world before using it in a long-running save.
+## Notes
+This is a datapack, not a prebuilt world save. It builds around the player when `/function farm:start` is run. The NPC menus and datapack commands have been added to the repository but still need an in-game test on Minecraft Java 26.2.
