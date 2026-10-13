@@ -1,29 +1,22 @@
-# Lobzik Minecraft Bot
+# Sunnybrook Farm — Minecraft Java 26.2
 
-A command-driven Minecraft Java bot built on Mineflayer. The old Fabric client is being retired.
+This branch replaces the old project on this branch with a story-driven farm tycoon datapack. The original `main` branch remains untouched.
 
-## Requirements and setup
+## Install the datapack
+1. Open `sunnybrook_farm/` in this repository.
+2. Download the folder contents (or download the repository ZIP and extract the `sunnybrook_farm` folder).
+3. Put `sunnybrook_farm` into `.minecraft/saves/<world>/datapacks/`.
+4. Open the world and run `/reload`.
+5. Stand in a mostly clear area and run `/function farm:start`. Creative mode is recommended for setup.
 
-- Node.js 22 or newer.
-- A Minecraft Java server you own or are authorized to use.
-- Copy `.env.example` to `.env`, then configure `MC_HOST`, `MC_PORT`, `MC_USERNAME`, and `BOT_OWNER` (your Minecraft username).
-- On a private offline-mode server only, use `MC_AUTH=offline`. For online-mode use `MC_AUTH=microsoft` and complete the Microsoft device login in the terminal. Never put passwords or tokens in `.env`.
-- Run `npm install`, then `npm start`.
+## Gameplay
+- Auto-builds a cottage, crop plot, barn, market stall, pond, and three named villager characters.
+- Story quests and rewards: `/trigger farm_quest set 1` (welcome), `2` (animal rescue), `3` (delivery dash), `4` (secret pond).
+- Farm currency and purchases: `/trigger farm_shop set 1` for help; `2` garden (20 coins), `3` chicken coop (35 coins), `4` windmill (60 coins).
+- Event: `/trigger farm_event set 1` for the Harvest Festival.
+- Guide: `/function farm:help`.
 
-The Mineflayer package is an updated fork that advertises support for Minecraft 1.8 through 26.3, including 26.2. The standard upstream package currently lists support through 26.1. See https://github.com/PrismarineJS/mineflayer and https://www.npmjs.com/package/@wp2508/mineflayer.
+The datapack is designed for Minecraft Java 26.2 and uses the singular `function` resource directory and pack format 107.1.
 
-## Chat commands
-
-- `!help` — show commands.
-- `!mine <block_name> <amount>` — mine up to 1–512 nearby reachable blocks. Example: `!mine cobblestone 32`.
-- `!come` — walk to the owner.
-- `!follow` — follow the owner.
-- `!stop` — cancel the current task/navigation.
-- `!guard` — report defensive settings.
-- `!status` — show health, food, and task state.
-
-Use registry names such as `iron_ore`, `oak_log`, `coal_ore`, and `cobblestone`. Mining counts blocks, not the number of dropped items. The bot only searches loaded nearby chunks; it will not reliably mine across an entire world. After mining, it tries to return and drop the gathered resources near the owner.
-
-## Navigation and defense
-
-Pathfinder can dig around obstacles and light parkour is enabled. Self-defense targets nearby hostile mobs and prioritizes running away at critically low health. Attacking players is disabled by default; set `ALLOW_PLAYER_COMBAT=true` only if this is appropriate and allowed on your server. Pathfinding cannot guarantee safety around every ravine, lava pool, or server-specific obstacle. Test in a private world first and follow server rules.
+## Current limitations
+This repository contains a datapack, not a pre-generated world save. The starter farm is built around the player where the function is run. Villagers provide character flavor; quests currently start via commands rather than right-click dialogue. Test in a copy of your world before using it in a long-running save.
