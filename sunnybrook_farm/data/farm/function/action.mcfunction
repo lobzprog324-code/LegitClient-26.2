@@ -7,5 +7,8 @@ execute if score @s farm_action matches 6 run function farm:shop/buy_coop
 execute if score @s farm_action matches 7 run function farm:shop/buy_windmill
 execute if score @s farm_action matches 8 run function farm:event/start
 execute if score @s farm_action matches 9 run function farm:quest/gift
+execute if score @s farm_action matches 10 run function farm:quest/turnin_welcome
+execute if score @s farm_action matches 11 run function farm:quest/turnin_animals
+execute if score @s farm_action matches 12 run function farm:quest/turnin_delivery
 scoreboard players set @s farm_action 0
 scoreboard players enable @s farm_action
