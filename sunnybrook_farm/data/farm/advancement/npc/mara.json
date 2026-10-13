@@ -1,0 +1,1 @@
+{"criteria":{"interact":{"trigger":"minecraft:player_interacted_with_entity","conditions":{"entity":{"type":"minecraft:mannequin","nbt":"{Tags:[\"farm_npc_guide\"]}"}}}},"rewards":{"function":"farm:npc_mara"}}
